@@ -1,5 +1,5 @@
 function fish_greeting
-    nofetch
+    neofetch
 end
 
 set -x PATH $HOME/.cargo/bin /home/leo/.local/bin $PATH
