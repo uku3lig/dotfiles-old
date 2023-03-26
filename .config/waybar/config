@@ -1,11 +1,12 @@
 {
     "position": "bottom", // Waybar position (top|bottom|left|right)
+    "layer": "top",
     "height": 24, // Waybar height (to be removed for auto height)
     "spacing": 2, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["wlr/workspaces"],
     "modules-center": [],
-    "modules-right": ["memory", "cpu", "pulseaudio", "battery", "backlight", "clock", "tray"],
+    "modules-right": ["network", "memory", "cpu", "pulseaudio", "battery", "backlight", "clock", "tray"],
     "wlr/workspaces": {
         "format": "{icon}",
 	"on-click": "activate",
@@ -47,6 +48,14 @@
         "format": "VOL {volume}%",
 	"format-muted": "muted",
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+    "network": {
+        "interface": "wlo1",
+	"interval": 5,
+	"format": "NET -",
+	"format-wifi": "NET {essid}",
+	"format-disconnected": "NET down",
+	"format-ethernet": "ETH {ifname}"
     }
 }
 
