@@ -94,7 +94,7 @@ button:hover {
 }
 
 #battery.low:not(.charging) {
-    color: @red;
+    background-color: @red;
 }
 
 label:focus {
