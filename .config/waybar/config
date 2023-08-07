@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["wlr/workspaces"],
     "modules-center": [],
-    "modules-right": ["network", "memory", "cpu", "pulseaudio", "battery", "backlight", "clock", "tray"],
+    "modules-right": ["memory", "cpu", "pulseaudio", "battery", "backlight", "clock", "tray"],
     "wlr/workspaces": {
         "format": "{icon}",
 	"on-click": "activate",
@@ -56,6 +56,10 @@
 	"format-wifi": "NET {essid}",
 	"format-disconnected": "NET down",
 	"format-ethernet": "ETH {ifname}"
+    },
+    "custom/splash": {
+        "exec": "hyprctl splash",
+	"interval": "once"
     }
 }
 
